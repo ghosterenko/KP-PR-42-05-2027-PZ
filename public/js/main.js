@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('projects-container');
-    const authLink = document.getElementById('auth-link');
+    const container = document.getElementById('projects_container');
+    const authLink = document.getElementById('auth_link');
 
-    // Проверяем LocalStorage: если юзер есть, меняем кнопку "Войти" на "Кабинет"
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
         authLink.textContent = `Кабинет (${user.name})`;
@@ -15,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(projects => {
             container.innerHTML = '';
             if (projects.length === 0) {
-                container.innerHTML = '<p>Пока нет добавленных проектов.</p>';
+                container.innerHTML = '<p>Пока нет добавленных проектов</p>';
                 return;
             }
 
             projects.forEach(project => {
                 const card = document.createElement('div');
-                card.className = 'project-card';
+                card.className = 'project_card';
                 card.innerHTML = `
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>

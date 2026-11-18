@@ -1,8 +1,8 @@
-document.getElementById('login-form').addEventListener('submit', (e) => {
+document.getElementById('login_form').addEventListener('submit', (e) => {
     e.preventDefault();
     const login = document.getElementById('login').value;
     const password = document.getElementById('password').value;
-    const errorMsg = document.getElementById('error-msg');
+    const errorMsg = document.getElementById('error_msg');
 
     fetch('/api/login', {
         method: 'POST',
@@ -12,9 +12,8 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     .then(res => res.json().then(data => ({ status: res.status, body: data })))
     .then(res => {
         if (res.status === 200) {
-            // Сохраняем пользователя в память браузера (LocalStorage)
             localStorage.setItem('user', JSON.stringify(res.body.user));
-            window.location.href = 'dashboard.html'; // Идем в кабинет
+            window.location.href = 'dashboard.html';
         } else {
             errorMsg.textContent = res.body.error;
         }
