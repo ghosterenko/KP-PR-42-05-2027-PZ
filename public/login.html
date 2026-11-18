@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Portfolio Platform</div>
+        <nav class="nav">
+            <a href="index.html">На главную</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="auth-box">
+            <h2>Вход в систему</h2>
+            <form id="login-form">
+                <label>Логин:</label>
+                <input type="text" id="login" required placeholder="admin">
+                
+                <label>Пароль:</label>
+                <input type="password" id="password" required placeholder="123">
+                
+                <button type="submit">Войти</button>
+            </form>
+            <p id="error-msg" style="color: red; text-align: center; margin-top: 10px;"></p>
+            
+            <div style="margin-top: 20px; font-size: 14px; color: #666; text-align: center;">
+                <p><b>Тестовые аккаунты:</b></p>
+                <p>Логин: <code>admin</code> | Пароль: <code>123</code></p>
+                <p>Логин: <code>ivan</code> | Пароль: <code>123</code></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

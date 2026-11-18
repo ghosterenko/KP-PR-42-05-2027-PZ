@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Portfolio Platform</div>
+        <nav class="nav">
+            <a href="index.html">На главную</a>
+            <span id="user-greeting" style="font-weight:bold; margin-left: 20px;"></span>
+            <a href="#" id="logout-btn" style="margin-left: 15px; color: red;">Выйти</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Управление проектами</h2>
+        
+        <div class="dashboard-layout">
+            <!-- Форма добавления -->
+            <div class="add-form-container">
+                <h3>Добавить проект</h3>
+                <form id="project-form">
+                    <input type="text" id="title" placeholder="Название проекта" required>
+                    <textarea id="description" placeholder="Описание задачи" required></textarea>
+                    <input type="url" id="link" placeholder="Ссылка на проект (URL)">
+                    <button type="submit">Сохранить проект</button>
+                    <p id="status-message" style="color: green; font-size: 14px;"></p>
+                </form>
+            </div>
+
+            <!-- Список проектов -->
+            <div class="list-container">
+                <h3>Мои работы</h3>
+                <div id="my-projects-list">
+                    <p>Загрузка...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
