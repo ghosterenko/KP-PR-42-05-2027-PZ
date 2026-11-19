@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         authLink.href = 'dashboard.html';
     }
 
-    // Загружаем все проекты
     fetch('/api/projects')
         .then(res => res.json())
         .then(projects => {
